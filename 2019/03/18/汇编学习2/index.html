@@ -79,13 +79,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="mask">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="浅谈CPU中的栈机制8086cpu中供了栈机制来使程序更好的结构化管理 我们都知道在汇编指令执行的过程中，cs和ip存放着当前指令的段地址和偏移地址 而CPU是如何知道栈的存在来使用它呢，  显然，cpu提供了寄存器来记录栈的栈顶，那就是 SS:SP  在任何情况下SS:SP指向栈顶元素，其中CPU对栈的操作有两个基本指令： push（入栈） ：就是把数据压入栈中 ，比如 ，push ax 就是把">
+<meta property="og:type" content="article">
+<meta property="og:title" content="汇编学习笔记 (二)">
+<meta property="og:url" content="http://yoursite.com/2019/03/18/汇编学习2/index.html">
 <meta property="og:site_name" content="mask">
+<meta property="og:description" content="浅谈CPU中的栈机制8086cpu中供了栈机制来使程序更好的结构化管理 我们都知道在汇编指令执行的过程中，cs和ip存放着当前指令的段地址和偏移地址 而CPU是如何知道栈的存在来使用它呢，  显然，cpu提供了寄存器来记录栈的栈顶，那就是 SS:SP  在任何情况下SS:SP指向栈顶元素，其中CPU对栈的操作有两个基本指令： push（入栈） ：就是把数据压入栈中 ，比如 ，push ax 就是把">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.imgur.com/cUjE5JC.png">
+<meta property="og:image" content="https://i.imgur.com/4at2o58.png">
+<meta property="og:updated_time" content="2019-03-22T13:45:29.357Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mask">
+<meta name="twitter:title" content="汇编学习笔记 (二)">
+<meta name="twitter:description" content="浅谈CPU中的栈机制8086cpu中供了栈机制来使程序更好的结构化管理 我们都知道在汇编指令执行的过程中，cs和ip存放着当前指令的段地址和偏移地址 而CPU是如何知道栈的存在来使用它呢，  显然，cpu提供了寄存器来记录栈的栈顶，那就是 SS:SP  在任何情况下SS:SP指向栈顶元素，其中CPU对栈的操作有两个基本指令： push（入栈） ：就是把数据压入栈中 ，比如 ，push ax 就是把">
+<meta name="twitter:image" content="https://i.imgur.com/cUjE5JC.png">
 
 
 
@@ -115,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/18/汇编学习2/">
 
 
 
 
 
-  <title>归档 | mask</title>
+  <title>汇编学习笔记 (二) | mask</title>
   
 
 
@@ -140,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -234,317 +241,158 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/18/汇编学习2/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mask">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mask">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">汇编学习笔记 (二)</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-18T19:43:41+08:00">
+                2019-03-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 8 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/27/CVE-2018-12613漏洞复现/" itemprop="url">
-              
-                <span itemprop="name">CVE-2018-12613漏洞复现.md</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-27T19:00:40+08:00" content="2019-03-27">
-          03-27
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/18/汇编学习2/" itemprop="url">
-              
-                <span itemprop="name">汇编学习笔记 (二)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-18T19:43:41+08:00" content="2019-03-18">
-          03-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/11/汇编学习/" itemprop="url">
-              
-                <span itemprop="name">汇编学习笔记 (一)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-11T21:15:06+08:00" content="2019-03-11">
-          03-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h1 id="浅谈CPU中的栈机制"><a href="#浅谈CPU中的栈机制" class="headerlink" title="浅谈CPU中的栈机制"></a>浅谈CPU中的栈机制</h1><h2 id="8086cpu中供了栈机制来使程序更好的结构化管理"><a href="#8086cpu中供了栈机制来使程序更好的结构化管理" class="headerlink" title="8086cpu中供了栈机制来使程序更好的结构化管理"></a>8086cpu中供了栈机制来使程序更好的结构化管理</h2><hr>
+<p>我们都知道在汇编指令执行的过程中，cs和ip存放着当前指令的段地址和偏移地址 而CPU是如何知道栈的存在来使用它呢，  显然，cpu提供了寄存器来记录栈的栈顶，那就是 SS:SP  在任何情况下SS:SP指向栈顶元素，其中CPU对栈的操作有两个基本指令：</p>
+<p>push（入栈） ：就是把数据压入栈中 ，比如 ，push ax 就是把ax压入栈中。push不只是只能压入寄存器的数据，还可以压入指定的段寄存器和内存单元字节中：</p>
+<p>比如：</p>
+<p>push 段寄存器地址    （把段寄存器中的数据压入栈中）</p>
+<p>push 内存地址        （把内存单元处的字中的数据压入栈中）</p>
+<p>pop（出栈）：其意义与push相反，就是把栈顶的数据取出。比如，pop ax 就是把栈顶的数据取出后放入ax中。</p>
+<p>当push执行一次后，栈顶 ss：sp的记录就会减二  sp = sp -2<br>而pop执行一次后 sp = sp + 2</p>
+<p>其具体解释如图所示：</p>
+<p><img src="https://i.imgur.com/cUjE5JC.png" alt=""></p>
+<p>然而 CPU虽然存在记录栈顶的位置的寄存器，但是CPU中并没有记录栈大小的寄存器，也就是说，cpu中会存在栈顶超界的问题，</p>
+<p>如图：</p>
+<p><img src="https://i.imgur.com/4at2o58.png" alt=""></p>
+<p>我们可以看出，cpu并不会检测当前执行push和pop时候会不会不在栈区域内。</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/13/c学习记录/" itemprop="url">
-              
-                <span itemprop="name">c学习记录</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-13T17:29:33+08:00" content="2019-02-13">
-          02-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/11/python爬虫，班级微信签到情况/" itemprop="url">
-              
-                <span itemprop="name">python爬虫，班级微信签到情况</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-11T00:22:00+08:00" content="2019-02-11">
-          02-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/09/python-study/" itemprop="url">
-              
-                <span itemprop="name">python_study</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-09T22:27:56+08:00" content="2019-02-09">
-          02-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/21/title/" itemprop="url">
-              
-                <span itemprop="name">未命名</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-21T21:38:56+08:00" content="2019-01-21">
-          01-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/21/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-21T21:02:18+08:00" content="2019-01-21">
-          01-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/11/汇编学习/" rel="next" title="汇编学习笔记 (一)">
+                <i class="fa fa-chevron-left"></i> 汇编学习笔记 (一)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/27/CVE-2018-12613漏洞复现/" rel="prev" title="CVE-2018-12613漏洞复现.md">
+                CVE-2018-12613漏洞复现.md <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -552,6 +400,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -572,8 +424,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -617,6 +478,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#浅谈CPU中的栈机制"><span class="nav-number">1.</span> <span class="nav-text">浅谈CPU中的栈机制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#8086cpu中供了栈机制来使程序更好的结构化管理"><span class="nav-number">1.1.</span> <span class="nav-text">8086cpu中供了栈机制来使程序更好的结构化管理</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -764,6 +641,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
